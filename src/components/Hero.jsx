@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import Button from './Button';
+import { TiLocationArrow } from "react-icons/ti";
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -20,8 +21,6 @@ const Hero = () => {
   function handleVideoLoad(){
     setLoadedVideos((prev)=> prev + 1);
   }
-
-
 
   const getVideoSrc = (index) => `videos/hero-${index}.mp4`
 
@@ -75,11 +74,14 @@ const Hero = () => {
             <p className='mb-5 max-w-64 font-robert-regular text-blue-100'>
               Enter the Metagame <br/> Unleash the Play Economy
             </p>
-            <Button/>
+            <Button id='watch-trailer' title="Watch Trailer" leftIcon={<TiLocationArrow />} containerClass="bg-yellow-300 flex-center gap-1"/>
 
           </div>
         </div>
       </div>
+            <h1 className='special-font hero-heading text-black'>
+              redefi<b>n</b>e
+            </h1>
     </div>
   )
 }
