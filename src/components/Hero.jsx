@@ -18,6 +18,10 @@ const Hero = () => {
     setCurrentIndex(upcomingVideoIndex);
   }
 
+  useGSAP(()=>{
+
+  }, {dependencies : [currentIndex], revertOnUpdate : true})
+
   function handleVideoLoad(){
     setLoadedVideos((prev)=> prev + 1);
   }
